@@ -33,6 +33,7 @@ function onBreedPick(evt) {
 function fillSelectWithOptions() {
   fetchBreeds()
     .then(breedsArray => {
+      selectors.select.classList.remove('is-hidden');
       selectors.loader.classList.add('is-hidden');
       createSelectOptions(breedsArray);
     })
